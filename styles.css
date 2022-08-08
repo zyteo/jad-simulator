@@ -12,6 +12,8 @@ div#main {
     height: 800px;
     background-color: aliceblue;
     position: relative;
+    background-image: url(images/background-plain.jpg);
+    background-size: cover;
 }
 
 div#background {
