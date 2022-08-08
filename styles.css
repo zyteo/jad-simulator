@@ -1,0 +1,123 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #747572;
+}
+
+div#main {
+    width: 1500px;
+    height: 800px;
+    background-color: aliceblue;
+    position: relative;
+}
+
+div#background {
+    /* url */
+    background-color: cyan;
+}
+
+div#jad {
+    width: 300px;
+    height: 200px;
+    background-color: red;
+    position: absolute;
+    top: 10%;
+    right: 40%;
+}
+
+div#character {
+    top: 200px;
+    left: 350px;
+    position: relative;
+    /* display: inline-block; */
+    max-width: max-content;
+    max-height: max-content;
+
+}
+
+div#player {
+    width: 120px;
+    height: 220px;
+    background-color: white;
+    /* position: absolute; */
+    /* top: 30%;
+    right: 60%; */
+}
+
+div#health {
+    width: 80px;
+    height: 5px;
+    background-color: lightgreen;
+    /* left: 80px; */
+
+    /* position: absolute; */
+
+}
+div#prayer {
+    width: 40px;
+    height: 40px;
+    background-color: green;
+    left: 50px;
+
+    /* position: absolute; */
+
+}
+
+div#inventory {
+    width: 280px;
+    height: 400px;
+    /* background-color: pink; */
+    position: relative;
+    top: 80px;
+    left: 1000px;
+    /* top: 40%;
+    right: 10%; */
+    /* set backlground to use image in folder */
+    background-image: url(images/inventory.JPG);
+    background-size: cover;
+    
+}
+
+div#top-invent {
+    /* set background */
+    width: 280px;
+    height: 50px;
+    /* background-color: red; */
+    top: 0%;
+    position: absolute;
+    
+}
+div#main-invent-item,#main-invent-pray {
+    /* set background */
+    top: 50px;
+    width: 280px;
+    height: 300px;
+    /* background-color: aqua; */
+    position: relative;
+}
+div#bottom-invent {
+    /* set background */
+    width: 280px;
+    height: 50px;
+    /* background-color: red; */
+    position: absolute;
+    bottom: 0%;
+}
+
+div.row {
+    width: 280px;
+    height: 42.85px;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: row;
+}
+div.item,.pray {
+    /* set background */
+    width: 70px;
+    height: 42.85px;
+    /* background-color: blue; */
+    border: 2px solid black;
+} 

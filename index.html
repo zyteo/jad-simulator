@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OSRS Jad simulator</title>
+
+    <!--style-->
+    <link rel="stylesheet" href="styles.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <h1>J</h1>
+
+
+
+    <button id="start">Start</button>
+    <div id="main">
+        <!-- <div id="main" style="display: none;"> -->
+        <div id="background"></div>
+        <div id="jad"></div>
+        <div id="character">
+            <div id="prayer"></div>
+            <div id="health"></div>
+            <div id="player"></div>
+        </div>
+        <div id="inventory">
+            <div id="top-invent">
+                <div class="row">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item" id="invent-items">I</div>
+                    <div class="item"></div>
+                    <div class="item" id="invent-prayer">P</div>
+                    <div class="item"></div>
+                </div>
+            </div>
+            <div id="main-invent-pray">
+                <div class="row"></div>
+                <div class="row"></div>
+                <div class="row"></div>
+                <div class="row">
+                    <div class="pray"></div>
+                    <div class="pray" id="pray-magic">Ma</div>
+                    <div class="pray" id="pray-ranged">Rg</div>
+                    <div class="pray"></div>
+                    <div class="pray"></div>
+                </div>
+                <div class="row"></div>
+                <div class="row"></div>
+                <div class="row"></div>
+            </div>
+            <div id="main-invent-item" style="display: none;">
+                <div class="row">
+                    <div class="item" id="item1"></div>
+                    <div class="item" id="item2"></div>
+                    <div class="item" id="item3"></div>
+                    <div class="item" id="item4"></div>
+                </div>
+                <div class="row">
+                    <div class="item" id="item5"></div>
+                    <div class="item" id="item6"></div>
+                    <div class="item" id="item7"></div>
+                    <div class="item" id="item8"></div>
+                </div>
+                <div class="row">
+                    <div class="item" id="item9"></div>
+                    <div class="item" id="item10"></div>
+                    <div class="item" id="item11"></div>
+                    <div class="item" id="item12"></div>
+                </div>
+                <div class="row">
+                    <div class="item" id="item13"></div>
+                    <div class="item" id="item14"></div>
+                    <div class="item" id="item15"></div>
+                    <div class="item" id="item16"></div>
+                </div>
+                <div class="row">
+                    <div class="item" id="item17"></div>
+                    <div class="item" id="item18"></div>
+                    <div class="item" id="item19"></div>
+                    <div class="item" id="item20"></div>
+                </div>
+                <div class="row">
+                    <div class="item" id="item21"></div>
+                    <div class="item" id="item22"></div>
+                    <div class="item" id="item23"></div>
+                    <div class="item" id="item24"></div>
+                </div>
+                <div class="row">
+                    <div class="item" id="item25"></div>
+                    <div class="item" id="item26"></div>
+                    <div class="item" id="item27"></div>
+                    <div class="item" id="item28"></div>
+                </div>
+
+            </div>
+            <div id="bottom-invent"></div>
+        </div>
+
+    </div>
+    <button id="quit" style="display: none;">Quit</button>
+
+    <!--js script-->
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
