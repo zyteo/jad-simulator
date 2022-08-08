@@ -23,6 +23,7 @@ Technologies used to build this project.
 - CSS
 - Javascript
 - jQuery
+- Adobe Photoshop
 ```
 
 ---
@@ -38,6 +39,8 @@ Scaling will be off depending on how user adjusts screen.
 Will decide to go on with fixed width/height using pixels for now.
 Set up the different divs for the app.
 Experimented A LOT with CSS styling.
+Took relevant screenshots in game to be used as images for the app.
+Used photoshop to adjust images.
 
 <!-- - 9 Aug 2022:  -->
 
