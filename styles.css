@@ -26,13 +26,13 @@ div#jad {
     height: 200px;
     background-color: red;
     position: absolute;
-    top: 10%;
-    right: 40%;
+    top: 15%;
+    right: 30%;
 }
 
 div#character {
-    top: 200px;
-    left: 350px;
+    top: 300px;
+    left: 650px;
     position: relative;
     /* display: inline-block; */
     max-width: max-content;
@@ -41,8 +41,8 @@ div#character {
 }
 
 div#player {
-    width: 120px;
-    height: 220px;
+    width: 100px;
+    height: 180px;
     background-color: white;
     /* position: absolute; */
     /* top: 30%;
@@ -51,7 +51,7 @@ div#player {
 
 div#health {
     width: 80px;
-    height: 5px;
+    height: 10px;
     background-color: lightgreen;
     /* left: 80px; */
 
@@ -73,8 +73,8 @@ div#inventory {
     height: 400px;
     /* background-color: pink; */
     position: relative;
-    top: 80px;
-    left: 1000px;
+    top: 130px;
+    left: 1215px;
     /* top: 40%;
     right: 10%; */
     /* set backlground to use image in folder */
