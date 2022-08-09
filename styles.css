@@ -124,15 +124,8 @@ div.pray {
   /* set background */
   width: 40px;
   height: 42.85px;
-  border: 2px solid black;
   left: 80px;
   position: relative;
-}
-
-div.pray:hover {
-  background-color: lightyellow;
-  opacity: 0.3;
-  border-radius: 50%;
 }
 
 div.praycolumn {
