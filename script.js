@@ -33,14 +33,16 @@ const magicPrayerCircle = () => {
   $("#pray-magic").css("background-color", "lightyellow");
   $("#pray-magic").css("opacity", "0.3");
   $("#pray-magic").css("border-radius", "50%");
-  selectedPrayer = "magic";
+  // set background of prayer
+  $("#prayer").css("background-image", "url(images/Protect_from_Magic.png)");
 };
 // function to append css of a circle to ranged and set selectedPrayer to ranged
 const rangePrayerCircle = () => {
   $("#pray-ranged").css("background-color", "lightyellow");
   $("#pray-ranged").css("opacity", "0.3");
   $("#pray-ranged").css("border-radius", "50%");
-  selectedPrayer = "ranged";
+  // set background of prayer
+  $("#prayer").css("background-image", "url(images/Protect_from_Missiles.png)");
 };
 // function to remove css of magic circle
 const removeMagicPrayerCircle = () => {
@@ -106,6 +108,7 @@ $(() => {
     if (selectedPrayer === "magic") {
       removeMagicPrayerCircle();
       selectedPrayer = "none";
+      $("#prayer").css("background-image", "url()");
       // if selectedPrayer is range, then clicking pray-magic will set selectedPrayer to magic.
     } else if (selectedPrayer === "ranged") {
       removeRangePrayerCircle();
@@ -129,6 +132,7 @@ $(() => {
     } else if (selectedPrayer === "ranged") {
       removeRangePrayerCircle();
       selectedPrayer = "none";
+      $("#prayer").css("background-image", "url()");
       // if selectedPrayer is none, then clicking pray-range will set selectedPrayer to range.
     } else {
       rangePrayerCircle();
@@ -138,13 +142,10 @@ $(() => {
 });
 
 // Sprites needed
-// Magic prayer
-// Ranged prayer
 // Jad magic attack with sound
 // Jad ranged attack with sound
 // Player with bp
 // Player with crossbow
 // Healthbar
 
-// Prayer screen, clickable for magic and ranged
 // Item inventory screen, brews, restore and crossbow

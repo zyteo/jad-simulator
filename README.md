@@ -44,6 +44,7 @@ Used photoshop to adjust images.
 
 - 9 Aug 2022: Adjusted CSS for images.
 Added the light yellow prayer circle for user to select prayer.
+Added the prayer sprite from osrswiki for the overhead prayer.
 
 ```
 
@@ -52,3 +53,4 @@ Added the light yellow prayer circle for user to select prayer.
 ## References
 
 Most of the images / sprites used are from my own fight with Jad.
+protection prayer sprites from https://oldschool.runescape.wiki

@@ -131,3 +131,8 @@ div.praycolumn {
   height: 42.85px;
   border: 2px solid black;
 }
+div#pray-magic {
+  opacity: 0.3;
+  background-color: lightyellow;
+  border-radius: 50%;
+}
