@@ -20,7 +20,6 @@ let deathCount = 0;
 // jquery/js event listeners
 
 // functions
-
 // function to change inventory screen to items
 const changeInventoryItem = () => {
   $("#inventory").css("background-image", "url(images/inventory.JPG)");
@@ -29,17 +28,19 @@ const changeInventoryItem = () => {
 const changeInventoryPrayer = () => {
   $("#inventory").css("background-image", "url(images/prayers.JPG)");
 };
-// function to append css of a circle to magic
+// function to append css of a circle to magic and set selectedPrayer to magic
 const magicPrayerCircle = () => {
   $("#pray-magic").css("background-color", "lightyellow");
   $("#pray-magic").css("opacity", "0.3");
   $("#pray-magic").css("border-radius", "50%");
+  selectedPrayer = "magic";
 };
-// function to append css of a circle to ranged
+// function to append css of a circle to ranged and set selectedPrayer to ranged
 const rangePrayerCircle = () => {
   $("#pray-ranged").css("background-color", "lightyellow");
   $("#pray-ranged").css("opacity", "0.3");
   $("#pray-ranged").css("border-radius", "50%");
+  selectedPrayer = "ranged";
 };
 // function to remove css of magic circle
 const removeMagicPrayerCircle = () => {
@@ -62,6 +63,7 @@ $(() => {
     $("#main-invent-item")[0].style.display = "none";
     $("#main-invent-pray")[0].style.display = "";
     magicPrayerCircle();
+    removeRangePrayerCircle();
     // set weapon to bp
   });
 
@@ -98,65 +100,41 @@ $(() => {
     });
   }
 
-  // onclick pray-magic, call funtion magicPrayerCircle
+  // onclick pray-magic
   $("#pray-magic").on("click", () => {
-    magicPrayerCircle();
-    removeRangePrayerCircle();
-    selectedPrayer = "magic";
+    // if selectedPrayer is magic, then clicking pray-magic will set selectedPrayer to none.
+    if (selectedPrayer === "magic") {
+      removeMagicPrayerCircle();
+      selectedPrayer = "none";
+      // if selectedPrayer is range, then clicking pray-magic will set selectedPrayer to magic.
+    } else if (selectedPrayer === "ranged") {
+      removeRangePrayerCircle();
+      selectedPrayer = "magic";
+      magicPrayerCircle();
+      // if selectedPrayer is none, then clicking pray-magic will set selectedPrayer to magic.
+    } else {
+      magicPrayerCircle();
+      selectedPrayer = "magic";
+    }
   });
 
-  // onclick pray-range, call funtion rangePrayerCircle
+  // onclick pray-range
   $("#pray-ranged").on("click", () => {
-    rangePrayerCircle();
-    removeMagicPrayerCircle();
-    selectedPrayer = "ranged";
+    // if selectedPrayer is magic, then clicking pray-range will set selectedPrayer to range.
+    if (selectedPrayer === "magic") {
+      removeMagicPrayerCircle();
+      selectedPrayer = "ranged";
+      rangePrayerCircle();
+      // if selectedPrayer is range, then clicking pray-range will set selectedPrayer to none.
+    } else if (selectedPrayer === "ranged") {
+      removeRangePrayerCircle();
+      selectedPrayer = "none";
+      // if selectedPrayer is none, then clicking pray-range will set selectedPrayer to range.
+    } else {
+      rangePrayerCircle();
+      selectedPrayer = "ranged";
+    }
   });
-
-  // If prayer on magic
-  // Click magic becomes none, click ranged becomes ranged
-  // white is none, red is magic, green is ranged
-  // if ($(`#prayer`)[0].style.background == "red") {
-  //   $(`#pray-magic`).on("click", () => {
-  //     magicPrayerCircle();
-  //     let selectedPrayer = "none";
-  //     $(`#prayer`)[0].style.background = "white";
-  //     console.log("praying", selectedPrayer);
-  //   });
-  //   $(`#pray-ranged`).on("click", () => {
-  //     rangePrayerCircle();
-  //     let selectedPrayer = "ranged";
-  //     $(`#prayer`)[0].style.background = "green";
-  //     console.log("praying", selectedPrayer);
-  //   });
-  // }
-  // if ($(`#prayer`)[0].style.background == "green") {
-  //   $(`#pray-ranged`).on("click", () => {
-  //     rangePrayerCircle();
-  //     let selectedPrayer = "none";
-  //     console.log("praying", selectedPrayer);
-  //     $(`#prayer`)[0].style.background = "white";
-  //   });
-  //   $(`#pray-magic`).on("click", () => {
-  //     magicPrayerCircle();
-  //     let selectedPrayer = "magic";
-  //     console.log("praying", selectedPrayer);
-  //     $(`#prayer`)[0].style.background = "red";
-  //   });
-  // }
-  // if ($(`#prayer`)[0].style.background == "white") {
-  //   $(`#pray-ranged`).on("click", () => {
-  //     rangePrayerCircle();
-  //     let selectedPrayer = "ranged";
-  //     console.log("praying", selectedPrayer);
-  //     $(`#prayer`)[0].style.background = "green";
-  //   });
-  //   $(`#pray-magic`).on("click", () => {
-  //     magicPrayerCircle();
-  //     let selectedPrayer = "magic";
-  //     console.log("praying", selectedPrayer);
-  //     $(`#prayer`)[0].style.background = "red";
-  //   });
-  // }
 });
 
 // Sprites needed
