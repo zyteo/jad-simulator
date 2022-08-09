@@ -59,10 +59,9 @@ div#health {
 div#prayer {
   width: 40px;
   height: 40px;
-  background-color: green;
   left: 50px;
-
-  /* position: absolute; */
+  background-image: url(images/Protect_from_Magic.png);
+  background-size: cover;
 }
 
 div#inventory {
