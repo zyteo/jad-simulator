@@ -102,6 +102,13 @@ div.row {
   display: flex;
   flex-direction: row;
 }
+div.itemrow {
+  width: 280px;
+  height: 42.85px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 div.prayrow {
   width: 280px;
   height: 42.85px;
@@ -110,10 +117,16 @@ div.prayrow {
   top: 134px;
   position: relative;
 }
-div.item {
+div.inventory-selection {
   width: 70px;
   height: 42.85px;
+}
+div.item {
+  width: 30px;
+  height: 42.85px;
   border: 1px solid black;
+  background-image: url(images/Saradomin_brew\(4\).png);
+  background-size: contain;
 }
 div.itemcolumn {
   width: 30px;

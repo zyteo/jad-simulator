@@ -2,6 +2,7 @@
 <!-- ZY, 8 Aug 2022 -->
 
 Died on first try, got it on second try AND I'M NEVER GOING BACK
+
 # Welcome to OSRS Jad simulator. No download required, available on browser, and it's free!
 
 ## For you to practice juggling prayer flicking, food eating and weapon changing.
@@ -14,7 +15,6 @@ Best to use on a browser. Not mobile-compatible, does not feature responsive des
 
 I think github's starstruck badge is kinda cute.
 You can thank me by "Star"ing this repo, so that it helps contribute to my starstruck badge.
-
 
 Technologies used to build this project.
 
@@ -45,6 +45,8 @@ Used photoshop to adjust images.
 - 9 Aug 2022: Adjusted CSS for images.
 Added the light yellow prayer circle for user to select prayer.
 Added the prayer sprite from osrswiki for the overhead prayer.
+Added the item sprites for saradomin brew, super restore and rune crossbow.
+Adjusted CSS for the item inventory.
 
 ```
 
