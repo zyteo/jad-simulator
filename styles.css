@@ -1,125 +1,143 @@
 html,
 body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background: #747572;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #747572;
 }
 
 div#main {
-    width: 1500px;
-    height: 800px;
-    background-color: aliceblue;
-    position: relative;
-    background-image: url(images/background-plain.jpg);
-    background-size: cover;
+  width: 1500px;
+  height: 800px;
+  background-color: aliceblue;
+  position: relative;
+  background-image: url(images/background-plain.jpg);
+  background-size: cover;
 }
 
 div#background {
-    /* url */
-    background-color: cyan;
+  /* url */
+  background-color: cyan;
 }
 
 div#jad {
-    width: 300px;
-    height: 200px;
-    background-color: red;
-    position: absolute;
-    top: 15%;
-    right: 30%;
+  width: 300px;
+  height: 200px;
+  background-color: red;
+  position: absolute;
+  top: 15%;
+  right: 30%;
 }
 
 div#character {
-    top: 300px;
-    left: 650px;
-    position: relative;
-    /* display: inline-block; */
-    max-width: max-content;
-    max-height: max-content;
-
+  top: 300px;
+  left: 650px;
+  position: relative;
+  /* display: inline-block; */
+  max-width: max-content;
+  max-height: max-content;
 }
 
 div#player {
-    width: 100px;
-    height: 180px;
-    background-color: white;
-    /* position: absolute; */
-    /* top: 30%;
+  width: 100px;
+  height: 180px;
+  background-color: white;
+  /* position: absolute; */
+  /* top: 30%;
     right: 60%; */
 }
 
 div#health {
-    width: 80px;
-    height: 10px;
-    background-color: lightgreen;
-    /* left: 80px; */
+  width: 80px;
+  height: 10px;
+  background-color: lightgreen;
+  /* left: 80px; */
 
-    /* position: absolute; */
-
+  /* position: absolute; */
 }
 div#prayer {
-    width: 40px;
-    height: 40px;
-    background-color: green;
-    left: 50px;
+  width: 40px;
+  height: 40px;
+  background-color: green;
+  left: 50px;
 
-    /* position: absolute; */
-
+  /* position: absolute; */
 }
 
 div#inventory {
-    width: 280px;
-    height: 400px;
-    /* background-color: pink; */
-    position: relative;
-    top: 130px;
-    left: 1215px;
-    /* top: 40%;
+  width: 280px;
+  height: 400px;
+  position: relative;
+  top: 130px;
+  left: 1215px;
+  /* top: 40%;
     right: 10%; */
-    /* set backlground to use image in folder */
-    background-image: url(images/prayers.JPG);
-    background-size: cover;
-    
+  background-image: url(images/prayers.JPG);
+  background-size: cover;
 }
 
 div#top-invent {
-    /* set background */
-    width: 280px;
-    height: 50px;
-    /* background-color: red; */
-    top: 0%;
-    position: absolute;
-    
+  /* set background */
+  width: 280px;
+  height: 50px;
+  top: 0%;
+  position: absolute;
 }
-div#main-invent-item,#main-invent-pray {
-    /* set background */
-    top: 50px;
-    width: 280px;
-    height: 300px;
-    /* background-color: aqua; */
-    position: relative;
+div#main-invent-item,
+#main-invent-pray {
+  /* set background */
+  top: 50px;
+  width: 280px;
+  height: 300px;
+  position: relative;
 }
 div#bottom-invent {
-    /* set background */
-    width: 280px;
-    height: 50px;
-    /* background-color: red; */
-    position: absolute;
-    bottom: 0%;
+  /* set background */
+  width: 280px;
+  height: 50px;
+  position: absolute;
+  bottom: 0%;
 }
 
 div.row {
-    width: 280px;
-    height: 42.85px;
-    /* background-color: green; */
-    display: flex;
-    flex-direction: row;
+  width: 280px;
+  height: 42.85px;
+  display: flex;
+  flex-direction: row;
 }
-div.item,.pray {
-    /* set background */
-    width: 70px;
-    height: 42.85px;
-    /* background-color: blue; */
-    border: 2px solid black;
-} 
+div.prayrow {
+  width: 280px;
+  height: 42.85px;
+  display: flex;
+  flex-direction: row;
+  top: 134px;
+  position: relative;
+}
+div.item {
+  /* set background */
+  width: 70px;
+  height: 42.85px;
+  border: 2px solid black;
+}
+div.pray {
+  /* set background */
+  width: 40px;
+  height: 42.85px;
+  border: 2px solid black;
+  left: 80px;
+  position: relative;
+}
+
+div.pray:hover {
+  background-color: lightyellow;
+  opacity: 0.3;
+  border-radius: 50%;
+}
+
+div.praycolumn {
+  /* set background */
+  width: 28px;
+  height: 42.85px;
+  border: 2px solid black;
+}

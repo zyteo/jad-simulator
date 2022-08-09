@@ -18,6 +18,19 @@ let deathCount = 0;
 // clicking 'start' will enable the game.
 // clicking 'quit' button will end the game and show deathcount.
 // jquery/js event listeners
+
+// functions
+
+// function to change inventory screen to items
+const changeInventoryItem = () => {
+  $("#inventory").css("background-image", "url(images/inventory.JPG)");
+};
+
+// function to change inventory screen to prayer
+const changeInventoryPrayer = () => {
+  $("#inventory").css("background-image", "url(images/prayers.JPG)");
+};
+
 $(() => {
   // on click, start game
   $("#start").on("click", () => {
@@ -44,18 +57,18 @@ $(() => {
   $("#jad").on("click", () => {
     console.log("jad");
   });
-  // choosing the inventory screen
+  // choosing the inventory item screen
   $("#invent-items").on("click", () => {
     $("#main-invent-pray")[0].style.display = "none";
     $("#main-invent-item")[0].style.display = "";
-
-    // setbackground to xxx
+    changeInventoryItem();
   });
+  // choosing the inventory prayer screen
   $("#invent-prayer").on("click", () => {
     $("#main-invent-item")[0].style.display = "none";
     $("#main-invent-pray")[0].style.display = "";
+    changeInventoryPrayer();
 
-    // set background to xxx
   });
   // for loop for each inventory item
   // depends on whether screen is prayer screen or inventory screen
