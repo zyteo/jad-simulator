@@ -56,12 +56,12 @@ $(() => {
     $("#main")[0].style.display = "";
     $("#quit")[0].style.display = "";
     $("#start")[0].style.display = "none";
-
     selectedPrayer = "magic";
     health = 100;
     deathCount = 0;
     $("#main-invent-item")[0].style.display = "none";
     $("#main-invent-pray")[0].style.display = "";
+    magicPrayerCircle();
     // set weapon to bp
   });
 

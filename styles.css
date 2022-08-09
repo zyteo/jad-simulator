@@ -78,7 +78,6 @@ div#inventory {
 }
 
 div#top-invent {
-  /* set background */
   width: 280px;
   height: 50px;
   top: 0%;
@@ -86,14 +85,12 @@ div#top-invent {
 }
 div#main-invent-item,
 #main-invent-pray {
-  /* set background */
   top: 50px;
   width: 280px;
   height: 300px;
   position: relative;
 }
 div#bottom-invent {
-  /* set background */
   width: 280px;
   height: 50px;
   position: absolute;
@@ -115,13 +112,15 @@ div.prayrow {
   position: relative;
 }
 div.item {
-  /* set background */
   width: 70px;
   height: 42.85px;
-  border: 2px solid black;
+  border: 1px solid black;
+}
+div.itemcolumn {
+  width: 30px;
+  height: 42.85px;
 }
 div.pray {
-  /* set background */
   width: 40px;
   height: 42.85px;
   left: 80px;
@@ -129,7 +128,6 @@ div.pray {
 }
 
 div.praycolumn {
-  /* set background */
   width: 28px;
   height: 42.85px;
   border: 2px solid black;

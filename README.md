@@ -42,7 +42,8 @@ Experimented A LOT with CSS styling.
 Took relevant screenshots in game to be used as images for the app.
 Used photoshop to adjust images.
 
-<!-- - 9 Aug 2022:  -->
+- 9 Aug 2022: Adjusted CSS for images.
+Added the light yellow prayer circle for user to select prayer.
 
 ```
 
