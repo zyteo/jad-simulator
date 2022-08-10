@@ -121,13 +121,74 @@ div.inventory-selection {
   width: 70px;
   height: 42.85px;
 }
-div.item {
+div.saradomin-brew-4 {
   width: 30px;
   height: 42.85px;
-  border: 1px solid black;
   background-image: url(images/Saradomin_brew\(4\).png);
   background-size: contain;
 }
+div.saradomin-brew-3 {
+  width: 30px;
+  height: 42.85px;
+  background-image: url(images/Saradomin_brew\(3\).png);
+  background-size: contain;
+}
+div.saradomin-brew-2 {
+  width: 30px;
+  height: 42.85px;
+  background-image: url(images/Saradomin_brew\(2\).png);
+  background-size: contain;
+}
+div.saradomin-brew-1 {
+  width: 30px;
+  height: 42.85px;
+  background-image: url(images/Saradomin_brew\(1\).png);
+  background-size: contain;
+}
+
+div.super-restore-4 {
+  width: 30px;
+  height: 42.85px;
+  background-image: url(images/Super_restore\(4\).png);
+  background-size: contain;
+}
+div.super-restore-3 {
+  width: 30px;
+  height: 42.85px;
+  background-image: url(images/Super_restore\(3\).png);
+  background-size: contain;
+}
+div.super-restore-2 {
+  width: 30px;
+  height: 42.85px;
+  background-image: url(images/Super_restore\(2\).png);
+  background-size: contain;
+}
+div.super-restore-1 {
+  width: 30px;
+  height: 42.85px;
+  background-image: url(images/Super_restore\(1\).png);
+  background-size: contain;
+}
+div.empty-vial {
+  width: 30px;
+  height: 42.85px;
+  background-image: url(images/Vial.png);
+  background-size: contain;
+}
+div.blowpipe {
+  width: 30px;
+  height: 42.85px;
+  background-image: url(images/Toxic_blowpipe.png);
+  background-size: cover;
+}
+div.crossbow {
+  width: 30px;
+  height: 42.85px;
+  background-image: url(images/Rune_crossbow.png);
+  background-size: cover;
+}
+
 div.itemcolumn {
   width: 30px;
   height: 42.85px;

@@ -53,6 +53,7 @@ Added the item sprites for saradomin brew, super restore and rune crossbow.
 Adjusted CSS for the item inventory.
 
 - 10 Aug 2022: Added hotkey to change inventory.
+Added function to 'drink' potions in inventory.
 
 
 ```

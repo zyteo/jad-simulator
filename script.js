@@ -100,15 +100,75 @@ $(() => {
       changeInventoryItem();
     }
   };
-  // for loop for each inventory item
-  // depends on whether screen is prayer screen or inventory screen
-  // if screen prayer, only onclick for item 18 and 23,
-  // if screen invent, then for food
-  for (let i = 1; i < 29; i++) {
+
+  // for saradomin brew
+  for (let i = 1; i < 15; i++) {
     $(`#item${i}`).on("click", () => {
-      console.log(i);
+      if ($(`#item${i}`).hasClass("saradomin-brew-4")) {
+        setTimeout(function () {
+          $(`#item${i}`)
+            .addClass("saradomin-brew-3")
+            .removeClass("saradomin-brew-4");
+        }, 600);
+      } else if ($(`#item${i}`).hasClass("saradomin-brew-3")) {
+        setTimeout(function () {
+          $(`#item${i}`)
+            .addClass("saradomin-brew-2")
+            .removeClass("saradomin-brew-3");
+        }, 600);
+      } else if ($(`#item${i}`).hasClass("saradomin-brew-2")) {
+        setTimeout(function () {
+          $(`#item${i}`)
+            .addClass("saradomin-brew-1")
+            .removeClass("saradomin-brew-2");
+        }, 600);
+      } else if ($(`#item${i}`).hasClass("saradomin-brew-1")) {
+        setTimeout(function () {
+          $(`#item${i}`).addClass("empty-vial").removeClass("saradomin-brew-1");
+        }, 600);
+      }
     });
   }
+  // for super restore
+  for (let i = 15; i < 28; i++) {
+    $(`#item${i}`).on("click", () => {
+      if ($(`#item${i}`).hasClass("super-restore-4")) {
+        setTimeout(function () {
+          $(`#item${i}`)
+            .addClass("super-restore-3")
+            .removeClass("super-restore-4");
+        }, 600);
+      } else if ($(`#item${i}`).hasClass("super-restore-3")) {
+        setTimeout(function () {
+          $(`#item${i}`)
+            .addClass("super-restore-2")
+            .removeClass("super-restore-3");
+        }, 600);
+      } else if ($(`#item${i}`).hasClass("super-restore-2")) {
+        setTimeout(function () {
+          $(`#item${i}`)
+            .addClass("super-restore-1")
+            .removeClass("super-restore-2");
+        }, 600);
+      } else if ($(`#item${i}`).hasClass("super-restore-1")) {
+        setTimeout(function () {
+          $(`#item${i}`).addClass("empty-vial").removeClass("super-restore-1");
+        }, 600);
+      }
+    });
+  }
+  // weapon changing
+  $(`#item28`).on("click", () => {
+    if ($(`#item28`).hasClass("blowpipe")) {
+      setTimeout(function () {
+        $(`#item28`).addClass("crossbow").removeClass("blowpipe");
+      }, 600);
+    } else if ($(`#item28`).hasClass("crossbow")) {
+      setTimeout(function () {
+        $(`#item28`).addClass("blowpipe").removeClass("crossbow");
+      }, 600);
+    }
+  });
 
   // onclick pray-magic
   $("#pray-magic").on("click", () => {
@@ -128,7 +188,6 @@ $(() => {
       selectedPrayer = "magic";
     }
   });
-
   // onclick pray-range
   $("#pray-ranged").on("click", () => {
     // if selectedPrayer is magic, then clicking pray-range will set selectedPrayer to range.
