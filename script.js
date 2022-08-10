@@ -22,10 +22,14 @@ let deathCount = 0;
 // functions
 // function to change inventory screen to items
 const changeInventoryItem = () => {
+  $("#main-invent-pray")[0].style.display = "none";
+  $("#main-invent-item")[0].style.display = "";
   $("#inventory").css("background-image", "url(images/inventory.JPG)");
 };
 // function to change inventory screen to prayer
 const changeInventoryPrayer = () => {
+  $("#main-invent-item")[0].style.display = "none";
+  $("#main-invent-pray")[0].style.display = "";
   $("#inventory").css("background-image", "url(images/prayers.JPG)");
 };
 // function to append css of a circle to magic and set selectedPrayer to magic
@@ -82,16 +86,20 @@ $(() => {
   });
   // choosing the inventory item screen
   $("#invent-items").on("click", () => {
-    $("#main-invent-pray")[0].style.display = "none";
-    $("#main-invent-item")[0].style.display = "";
     changeInventoryItem();
   });
   // choosing the inventory prayer screen
   $("#invent-prayer").on("click", () => {
-    $("#main-invent-item")[0].style.display = "none";
-    $("#main-invent-pray")[0].style.display = "";
     changeInventoryPrayer();
   });
+  // choosing the inventory screen with hotkey
+  $(document)[0].onkeydown = (event) => {
+    if (event.code === "F3") {
+      changeInventoryPrayer();
+    } else if (event.code === "F4") {
+      changeInventoryItem();
+    }
+  };
   // for loop for each inventory item
   // depends on whether screen is prayer screen or inventory screen
   // if screen prayer, only onclick for item 18 and 23,

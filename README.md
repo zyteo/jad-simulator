@@ -16,6 +16,10 @@ Best to use on a browser. Not mobile-compatible, does not feature responsive des
 I think github's starstruck badge is kinda cute.
 You can thank me by "Star"ing this repo, so that it helps contribute to my starstruck badge.
 
+- [ ] 16 Stars - I'll upload the video of my first fight with Jad.
+- [ ] 128 Stars - I'll upload the video of my second fight with Jad.
+- [ ] 512 Stars - I'll say a big thank you.
+
 Technologies used to build this project.
 
 ```
@@ -47,6 +51,9 @@ Added the light yellow prayer circle for user to select prayer.
 Added the prayer sprite from osrswiki for the overhead prayer.
 Added the item sprites for saradomin brew, super restore and rune crossbow.
 Adjusted CSS for the item inventory.
+
+- 10 Aug 2022: Added hotkey to change inventory.
+
 
 ```
 
