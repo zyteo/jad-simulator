@@ -40,12 +40,10 @@ div#character {
 }
 
 div#player {
-  width: 100px;
+  width: 60px;
   height: 180px;
-  background-color: white;
-  /* position: absolute; */
-  /* top: 30%;
-    right: 60%; */
+  background-image: url(images/320px-Toxic_blowpipe_equipped_female.png);
+  background-size: contain;
 }
 
 div#health {
@@ -176,13 +174,13 @@ div.empty-vial {
   background-image: url(images/Vial.png);
   background-size: contain;
 }
-div.blowpipe {
+div.crossbow {
   width: 30px;
   height: 42.85px;
   background-image: url(images/Toxic_blowpipe.png);
   background-size: cover;
 }
-div.crossbow {
+div.blowpipe {
   width: 30px;
   height: 42.85px;
   background-image: url(images/Rune_crossbow.png);

@@ -54,6 +54,7 @@ Adjusted CSS for the item inventory.
 
 - 10 Aug 2022: Added hotkey to change inventory.
 Added function to 'drink' potions in inventory.
+Added player sprite for blowpipe / crossbow.
 
 
 ```

@@ -56,6 +56,22 @@ const removeMagicPrayerCircle = () => {
 const removeRangePrayerCircle = () => {
   $("#pray-ranged").css("opacity", "0");
 };
+// function to change player image to hold crossbow
+const wieldCrossbow = () => {
+  $("#player").css("width", "100px");
+  $("#player").css(
+    "background-image",
+    "url(images/800px-Rune_crossbow_equipped_female.png)"
+  );
+};
+// function to change player image to hold blowpipe
+const wieldBlowpipe = () => {
+  $("#player").css("width", "60px");
+  $("#player").css(
+    "background-image",
+    "url(images/320px-Toxic_blowpipe_equipped_female.png)"
+  );
+};
 
 $(() => {
   // on click, start game
@@ -161,10 +177,14 @@ $(() => {
   $(`#item28`).on("click", () => {
     if ($(`#item28`).hasClass("blowpipe")) {
       setTimeout(function () {
+        console.log("switch to cb");
+        wieldCrossbow();
         $(`#item28`).addClass("crossbow").removeClass("blowpipe");
       }, 600);
     } else if ($(`#item28`).hasClass("crossbow")) {
       setTimeout(function () {
+        console.log("switch to bp");
+        wieldBlowpipe();
         $(`#item28`).addClass("blowpipe").removeClass("crossbow");
       }, 600);
     }
