@@ -4,13 +4,10 @@ let selectedPrayer = "magic";
 let health = 100;
 const jadAttack = ["magic", "ranged"];
 let deathCount = 0;
-var audio = new Audio(`music/TzTok-Jad_Magic_attack.ogg.mp3`);
-audio.play();
 // Jad attack array magic range (math random 0 and 1)
 // jad attack magic, if prayer not magic, health - 60
 // jad attack ranged, if prayer not ranged, health - 60
 // once health = 0, deathCount +1, health becomes 100 again.
-
 
 // clicking 'start' will enable the game.
 // clicking 'quit' button will end the game and show deathcount.
@@ -68,10 +65,14 @@ const wieldBlowpipe = () => {
     "url(images/320px-Toxic_blowpipe_equipped_female.png)"
   );
 };
-
-
-
-
+// function to change jad background image to magic
+const setJadMagic = () => {
+  $("#jad").css("background-image", "url(images/jad/jad-mage.gif)");
+};
+// function to change jad background image to ranged
+const setJadRanged = () => {
+  $("#jad").css("background-image", "url(images/jad/jad-range.gif)");
+};
 
 // jquery/js event listeners
 $(() => {
@@ -227,7 +228,3 @@ $(() => {
     }
   });
 });
-
-// Sprites needed
-// Jad magic attack with sound
-// Jad ranged attack with sound
