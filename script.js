@@ -4,20 +4,16 @@ let selectedPrayer = "magic";
 let health = 100;
 const jadAttack = ["magic", "ranged"];
 let deathCount = 0;
-// const inventoryScreen = ['prayer', 'items'];
-// let currentScreen = 'prayer';
-// let inventoryItems = [4,4,4,4,4,4,4,4,4,4,4];
-
+var audio = new Audio(`music/TzTok-Jad_Magic_attack.ogg.mp3`);
+audio.play();
 // Jad attack array magic range (math random 0 and 1)
 // jad attack magic, if prayer not magic, health - 60
 // jad attack ranged, if prayer not ranged, health - 60
 // once health = 0, deathCount +1, health becomes 100 again.
 
-// clicking drinking potion
 
 // clicking 'start' will enable the game.
 // clicking 'quit' button will end the game and show deathcount.
-// jquery/js event listeners
 
 // functions
 // function to change inventory screen to items
@@ -32,7 +28,7 @@ const changeInventoryPrayer = () => {
   $("#main-invent-pray")[0].style.display = "";
   $("#inventory").css("background-image", "url(images/prayers.JPG)");
 };
-// function to append css of a circle to magic and set selectedPrayer to magic
+// function to append css of a circle to magic
 const magicPrayerCircle = () => {
   $("#pray-magic").css("background-color", "lightyellow");
   $("#pray-magic").css("opacity", "0.3");
@@ -40,7 +36,7 @@ const magicPrayerCircle = () => {
   // set background of prayer
   $("#prayer").css("background-image", "url(images/Protect_from_Magic.png)");
 };
-// function to append css of a circle to ranged and set selectedPrayer to ranged
+// function to append css of a circle to ranged
 const rangePrayerCircle = () => {
   $("#pray-ranged").css("background-color", "lightyellow");
   $("#pray-ranged").css("opacity", "0.3");
@@ -73,6 +69,11 @@ const wieldBlowpipe = () => {
   );
 };
 
+
+
+
+
+// jquery/js event listeners
 $(() => {
   // on click, start game
   $("#start").on("click", () => {
@@ -82,8 +83,7 @@ $(() => {
     selectedPrayer = "magic";
     health = 100;
     deathCount = 0;
-    $("#main-invent-item")[0].style.display = "none";
-    $("#main-invent-pray")[0].style.display = "";
+    changeInventoryPrayer();
     magicPrayerCircle();
     removeRangePrayerCircle();
     // set weapon to bp
@@ -231,8 +231,3 @@ $(() => {
 // Sprites needed
 // Jad magic attack with sound
 // Jad ranged attack with sound
-// Player with bp
-// Player with crossbow
-// Healthbar
-
-// Item inventory screen, brews, restore and crossbow
