@@ -5,6 +5,10 @@ body {
   margin: 0;
   padding: 0;
   background: white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 div#main {
@@ -69,7 +73,6 @@ div#inventory {
   width: 280px;
   height: 400px;
   position: relative;
-  top: 130px;
   left: 1215px;
   background-image: url(images/prayers.JPG);
   background-size: cover;
@@ -208,4 +211,16 @@ div#pray-magic {
   opacity: 0.3;
   background-color: lightyellow;
   border-radius: 50%;
+}
+button {
+  width: 200px;
+  height: 50px;
+  background-image: url(images/button.JPG);
+  background-size: cover;
+  font-size: 1.5em;
+  color: white;
+  border-radius: 5px;
+}
+button:hover {
+  cursor: pointer;
 }

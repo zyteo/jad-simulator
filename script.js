@@ -176,9 +176,9 @@ $(() => {
   });
   // choosing the inventory screen with hotkey
   $(document)[0].onkeydown = (event) => {
-    if (event.code === "F3") {
+    if (event.code === "Digit3") {
       changeInventoryPrayer();
-    } else if (event.code === "F4") {
+    } else if (event.code === "Digit4") {
       changeInventoryItem();
     }
   };
