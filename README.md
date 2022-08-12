@@ -7,6 +7,10 @@ Died on first try, got it on second try AND I'M NEVER GOING BACK
 
 ## For you to practice juggling prayer flicking, food eating and weapon changing.
 
+##### I deployed on 2 websites, if 1 is down, at least there is the other.
+##### https://osrsjad.netlify.app/
+##### https://osrsjad.vercel.app/
+
 Not the most beautiful app out there, but inspired by the jad simulator from runeapps (thanks for the firecape!) and decided to make an osrs browser version since there isn't any on the market (that I know of).
 
 Only healthbar above character shows hitpoints changes. Orbs on the screen are just for show.
