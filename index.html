@@ -22,7 +22,11 @@
 
     <p>Stomp = pray ranged. Feet dangle = pray magic.</p>
 
-    <p>Hotkeys: 3 for prayer. 4 for items.</p>
+    <p>
+      Hotkeys: 3 for prayer. 4 for items.<br />
+      HP is set to 100. A sip of saradomin brew heals 15 hp. <br />
+      There is no limit to how much you can brew up. Use it responsibly.
+    </p>
 
     <p>Death count: <span id="death-count-value">0</span></p>
 
@@ -34,8 +38,8 @@
       <source src="music/TzTok-Jad_Ranged_attack.oga" type="audio/ogg" />
     </audio>
     <button id="start">Start</button>
-    <div id="main">
-      <!-- <div id="main" style="display: none;"> -->
+
+    <div id="main" style="display: none">
       <div id="background"></div>
       <div id="jad"></div>
       <div id="character">
@@ -125,7 +129,11 @@
       </div>
     </div>
     <button id="quit" style="display: none">Quit</button>
-
+    <footer>
+      Best viewed on Chrome, Firefox, or Edge. Bugs still exist, but app is functional.<br />
+      Created Aug 2022 by ZY. Github code
+      <a href="https://github.com/zyteo/jad-simulator" target="blank">here.</a>
+    </footer>
     <!--js script-->
     <script src="script.js"></script>
   </body>

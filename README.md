@@ -66,17 +66,17 @@ Set function to rotate jad attacks randomly.
 Changed F-keys to 3 and 4 instead of F3 and F4 since browser pop up inteferes.
 Adjust styling for app to look more decent.
 Adjusted start button function - restock inventory.
+Deployed app successfully!
 ```
 
 ---
 
 ## References
 
-Most of the images / sprites used are from my own fight with Jad.
+Some of the images / sprites used are from my own fight with Jad.
 
-protection prayer sprites from https://oldschool.runescape.wiki
+Protection prayer, potions, item sprites from https://oldschool.runescape.wiki
 
 Cropped my video with no watermark using https://online-video-cutter.com/crop-video
 
 Converted mp4 to gif with https://cloudconvert.com/mp4-to-gif
-

@@ -194,22 +194,27 @@ $(() => {
           $(`#item${i}`)
             .addClass("saradomin-brew-3")
             .removeClass("saradomin-brew-4");
+          // increase health by 15 and update css width
+          $("#hp-green").css("width", (health += 15) + "%");
         }, 600);
       } else if ($(`#item${i}`).hasClass("saradomin-brew-3")) {
         setTimeout(function () {
           $(`#item${i}`)
             .addClass("saradomin-brew-2")
             .removeClass("saradomin-brew-3");
+          $("#hp-green").css("width", (health += 15) + "%");
         }, 600);
       } else if ($(`#item${i}`).hasClass("saradomin-brew-2")) {
         setTimeout(function () {
           $(`#item${i}`)
             .addClass("saradomin-brew-1")
             .removeClass("saradomin-brew-2");
+          $("#hp-green").css("width", (health += 15) + "%");
         }, 600);
       } else if ($(`#item${i}`).hasClass("saradomin-brew-1")) {
         setTimeout(function () {
           $(`#item${i}`).addClass("empty-vial").removeClass("saradomin-brew-1");
+          $("#hp-green").css("width", (health += 15) + "%");
         }, 600);
       }
     });
