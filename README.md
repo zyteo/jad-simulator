@@ -64,7 +64,8 @@ Realised autoplaying mp3 isn't as straightforward as browsers have their own lim
 Added audio tag in html, browser dependent compatability so I will just include audio anyways.
 Set function to rotate jad attacks randomly.
 Changed F-keys to 3 and 4 instead of F3 and F4 since browser pop up inteferes.
-
+Adjust styling for app to look more decent.
+Adjusted start button function - restock inventory.
 ```
 
 ---

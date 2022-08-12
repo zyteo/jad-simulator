@@ -2,15 +2,7 @@
 const prayers = ["none", "magic", "ranged"];
 let selectedPrayer = "magic";
 let health = 100;
-const jadAttack = ["magic", "ranged"];
 let deathCount = 0;
-// Jad attack array magic range (math random 0 and 1)
-// jad attack magic, if prayer not magic, health - 60
-// jad attack ranged, if prayer not ranged, health - 60
-// once health = 0, deathCount +1, health becomes 100 again.
-
-// clicking 'start' will enable the game.
-// clicking 'quit' button will end the game and show deathcount.
 
 // functions
 // function to change inventory screen to items
@@ -86,6 +78,7 @@ const reduceHealth = () => {
     // if player health is less than damage, reset health to 100, add to deathcount
   } else {
     deathCount++;
+    $("#death-count-value").html(deathCount);
     //set health bar back to 100
     health = 100;
     return 100;
@@ -99,42 +92,37 @@ const setHealth = (value) => {
 const random = () => {
   return Math.floor(Math.random() * 2);
 };
-// function to change jad's attack to magic or ranged, every 3 secconds.
-// at the end of the 3 second interval, if the player's prayer is not the same as the jad's attack, reduce the player's health.
+// function to change jad's attack to magic or ranged, every 4.5 secconds.
+// at the end of the 4.5 second interval, if the player's prayer is not the same as the jad's attack, reduce the player's health.
 const jadAttackChange = () => {
   setTimeout(() => {
     if (random() === 0) {
       setJadMagic();
-      if (selectedPrayer !== "magic") {
-        setHealth(reduceHealth());
-      }
+      // set timeout, if player did not change prayer right within the 4.5 second interval, reduce player's health.
+      setTimeout(() => {
+        if (selectedPrayer !== "magic") {
+          setHealth(reduceHealth());
+        }
+      }, 4400);
     } else {
       setJadRanged();
-      if (selectedPrayer !== "ranged") {
-        setHealth(reduceHealth());
-      }
+      // set timeout, if player did not change prayer right within the 4.5 second interval, reduce player's health.
+      setTimeout(() => {
+        if (selectedPrayer !== "ranged") {
+          setHealth(reduceHealth());
+        }
+      }, 4400);
     }
-
+    // call jadAttackChange function again after 4.5 seconds
     jadAttackChange();
-  }, 3000);
+  }, 4500);
 };
-// function to stop jad's attack change and audio
+// function to stop jad's attack change and audio - doesnt work yet
 const stopJadAttackChange = () => {
   clearTimeout();
   $("#magic-sound")[0].pause();
   $("#ranged-sound")[0].pause();
-}
-
-// const jadAttackChange = () => {
-//   setTimeout(() => {
-//     if (random() === 0) {
-//       setJadMagic();
-//     } else {
-//       setJadRanged();
-//     }
-//     jadAttackChange();
-//   } , 3000);
-// }
+};
 
 // jquery/js event listeners
 $(() => {
@@ -146,17 +134,32 @@ $(() => {
     selectedPrayer = "magic";
     health = 100;
     deathCount = 0;
+    $("#death-count-value").html(deathCount);
     changeInventoryPrayer();
     magicPrayerCircle();
     removeRangePrayerCircle();
-    // set weapon to bp
-    // start game, set jad to attack
+    wieldBlowpipe();
+    // set the potions back to full dose and edit background url of potion for sara brew and super restore
+    // for saradomin brew
+    for (let i = 1; i < 15; i++) {
+      // remove all class and add sara brew class4
+      $(`#item${i}`).removeClass();
+      $(`#item${i}`).addClass("saradomin-brew-4");
+    }
+    // for super restore
+    for (let i = 15; i < 28; i++) {
+      $(`#item${i}`).removeClass();
+      $(`#item${i}`).addClass("super-restore-4");
+    }
+    // set jad to attack
     jadAttackChange();
   });
 
   // on click, quit game
   $("#quit").on("click", () => {
     stopJadAttackChange();
+    $("#magic-sound")[0].pause();
+    $("#ranged-sound")[0].pause();
     $("#main")[0].style.display = "none";
     $("#quit")[0].style.display = "none";
     $("#start")[0].style.display = "";
