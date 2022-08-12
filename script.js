@@ -65,13 +65,15 @@ const wieldBlowpipe = () => {
     "url(images/320px-Toxic_blowpipe_equipped_female.png)"
   );
 };
-// function to change jad background image to magic
+// function to change jad background image to magic and play magic sound
 const setJadMagic = () => {
   $("#jad").css("background-image", "url(images/jad/jad-magic.gif)");
+  $("#magic-sound")[0].play();
 };
-// function to change jad background image to ranged
+// function to change jad background image to ranged and play ranged sound
 const setJadRanged = () => {
   $("#jad").css("background-image", "url(images/jad/jad-ranged.gif)");
+  $("#ranged-sound")[0].play();
 };
 
 // jquery/js event listeners

@@ -61,6 +61,7 @@ Converted my mp4 to gif and added the gif into the app.
 Realised autoplaying mp3 isn't as straightforward as browsers have their own limitations.
 
 - 12 Aug 2022: Replaced jad gif and edited video with online app. Much better quality!
+Added audio tag in html, browser dependent compatability so I will just include audio anyways.
 
 ```
 
