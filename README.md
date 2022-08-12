@@ -60,6 +60,8 @@ Added player sprite for blowpipe / crossbow.
 Converted my mp4 to gif and added the gif into the app.
 Realised autoplaying mp3 isn't as straightforward as browsers have their own limitations.
 
+- 12 Aug 2022: Replaced jad gif and edited video with online app. Much better quality!
+
 ```
 
 ---
@@ -67,4 +69,10 @@ Realised autoplaying mp3 isn't as straightforward as browsers have their own lim
 ## References
 
 Most of the images / sprites used are from my own fight with Jad.
+
 protection prayer sprites from https://oldschool.runescape.wiki
+
+Cropped my video with no watermark using https://online-video-cutter.com/crop-video
+
+Converted mp4 to gif with https://cloudconvert.com/mp4-to-gif
+

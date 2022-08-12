@@ -67,11 +67,11 @@ const wieldBlowpipe = () => {
 };
 // function to change jad background image to magic
 const setJadMagic = () => {
-  $("#jad").css("background-image", "url(images/jad/jad-mage.gif)");
+  $("#jad").css("background-image", "url(images/jad/jad-magic.gif)");
 };
 // function to change jad background image to ranged
 const setJadRanged = () => {
-  $("#jad").css("background-image", "url(images/jad/jad-range.gif)");
+  $("#jad").css("background-image", "url(images/jad/jad-ranged.gif)");
 };
 
 // jquery/js event listeners

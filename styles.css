@@ -22,12 +22,12 @@ div#background {
 }
 
 div#jad {
-  width: 300px;
-  height: 200px;
+  width: 286px;
+  height: 224px;
   position: absolute;
   top: 15%;
   right: 30%;
-  background-image: url(images/jad/jad-range.gif);
+  background-image: url(images/jad/jad-ranged.gif);
   background-size: contain;
 }
 
