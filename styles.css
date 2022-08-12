@@ -4,7 +4,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: #747572;
+  background: white;
 }
 
 div#main {
@@ -54,7 +54,7 @@ div#hp-red {
 div#hp-green {
   background-color: lightgreen;
   height: 11px;
-  width: 90%;
+  width: 100%;
 }
 div#prayer {
   width: 40px;
@@ -71,8 +71,6 @@ div#inventory {
   position: relative;
   top: 130px;
   left: 1215px;
-  /* top: 40%;
-    right: 10%; */
   background-image: url(images/prayers.JPG);
   background-size: cover;
 }

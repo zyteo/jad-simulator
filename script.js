@@ -75,6 +75,66 @@ const setJadRanged = () => {
   $("#jad").css("background-image", "url(images/jad/jad-ranged.gif)");
   $("#ranged-sound")[0].play();
 };
+// function to reduce the player's health randomly. returns the value of the health.
+const reduceHealth = () => {
+  // damage from 20 to 38
+  let dmg = Math.ceil(Math.random() * 19) + 19;
+  // if player health is greater than damage, reduce health by damage
+  if (health - dmg > 0) {
+    health -= dmg;
+    return health;
+    // if player health is less than damage, reset health to 100, add to deathcount
+  } else {
+    deathCount++;
+    //set health bar back to 100
+    health = 100;
+    return 100;
+  }
+};
+// function that takes in a value and sets the health bar width to that value.
+const setHealth = (value) => {
+  $("#hp-green").css("width", value + "%");
+};
+// function that randomly returns a number 0 or 1
+const random = () => {
+  return Math.floor(Math.random() * 2);
+};
+// function to change jad's attack to magic or ranged, every 3 secconds.
+// at the end of the 3 second interval, if the player's prayer is not the same as the jad's attack, reduce the player's health.
+const jadAttackChange = () => {
+  setTimeout(() => {
+    if (random() === 0) {
+      setJadMagic();
+      if (selectedPrayer !== "magic") {
+        setHealth(reduceHealth());
+      }
+    } else {
+      setJadRanged();
+      if (selectedPrayer !== "ranged") {
+        setHealth(reduceHealth());
+      }
+    }
+
+    jadAttackChange();
+  }, 3000);
+};
+// function to stop jad's attack change and audio
+const stopJadAttackChange = () => {
+  clearTimeout();
+  $("#magic-sound")[0].pause();
+  $("#ranged-sound")[0].pause();
+}
+
+// const jadAttackChange = () => {
+//   setTimeout(() => {
+//     if (random() === 0) {
+//       setJadMagic();
+//     } else {
+//       setJadRanged();
+//     }
+//     jadAttackChange();
+//   } , 3000);
+// }
 
 // jquery/js event listeners
 $(() => {
@@ -90,10 +150,13 @@ $(() => {
     magicPrayerCircle();
     removeRangePrayerCircle();
     // set weapon to bp
+    // start game, set jad to attack
+    jadAttackChange();
   });
 
   // on click, quit game
   $("#quit").on("click", () => {
+    stopJadAttackChange();
     $("#main")[0].style.display = "none";
     $("#quit")[0].style.display = "none";
     $("#start")[0].style.display = "";
