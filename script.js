@@ -131,6 +131,8 @@ $(() => {
     $("#main")[0].style.display = "";
     $("#quit")[0].style.display = "";
     $("#start")[0].style.display = "none";
+    // set jad to attack
+    jadAttackChange();
     selectedPrayer = "magic";
     health = 100;
     deathCount = 0;
@@ -151,8 +153,6 @@ $(() => {
       $(`#item${i}`).removeClass();
       $(`#item${i}`).addClass("super-restore-4");
     }
-    // set jad to attack
-    jadAttackChange();
   });
 
   // on click, quit game

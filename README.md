@@ -67,6 +67,9 @@ Changed F-keys to 3 and 4 instead of F3 and F4 since browser pop up inteferes.
 Adjust styling for app to look more decent.
 Adjusted start button function - restock inventory.
 Deployed app successfully!
+
+- 13 Aug 2022: Edited text slightly and shifted jad attack timer up.
+Made repo public.
 ```
 
 ---
