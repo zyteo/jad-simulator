@@ -74,6 +74,8 @@ Deployed app successfully!
 
 - 13 Aug 2022: Edited text slightly and shifted jad attack timer up.
 Made repo public.
+
+- 26 Jan 2024: Quit button now works as intended.
 ```
 
 ---

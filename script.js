@@ -95,7 +95,7 @@ const random = () => {
 // function to change jad's attack to magic or ranged, every 4.5 secconds.
 // at the end of the 4.5 second interval, if the player's prayer is not the same as the jad's attack, reduce the player's health.
 const jadAttackChange = () => {
-  setTimeout(() => {
+  jadID = setTimeout(() => {
     if (random() === 0) {
       setJadMagic();
       // set timeout, if player did not change prayer right within the 4.5 second interval, reduce player's health.
@@ -119,7 +119,7 @@ const jadAttackChange = () => {
 };
 // function to stop jad's attack change and audio - doesnt work yet
 const stopJadAttackChange = () => {
-  clearTimeout();
+  clearTimeout(jadID);
   $("#magic-sound")[0].pause();
   $("#ranged-sound")[0].pause();
 };
@@ -135,6 +135,7 @@ $(() => {
     jadAttackChange();
     selectedPrayer = "magic";
     health = 100;
+    setHealth(health);
     deathCount = 0;
     $("#death-count-value").html(deathCount);
     changeInventoryPrayer();
@@ -158,8 +159,6 @@ $(() => {
   // on click, quit game
   $("#quit").on("click", () => {
     stopJadAttackChange();
-    $("#magic-sound")[0].pause();
-    $("#ranged-sound")[0].pause();
     $("#main")[0].style.display = "none";
     $("#quit")[0].style.display = "none";
     $("#start")[0].style.display = "";
