@@ -76,6 +76,8 @@ Deployed app successfully!
 Made repo public.
 
 - 26 Jan 2024: Quit button now works as intended.
+
+- 10 Aug 2025: Upgraded node version on vercel.
 ```
 
 ---
